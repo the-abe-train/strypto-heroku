@@ -1,9 +1,10 @@
 <div class="float-space">
+  <img class="disco-ball" src="../images/toppng.com-colorful-disco-ball-png-700x700.png" alt="disco ball">
   <div class="floater f1">
     <p>Who carries cash anymore?</p>
   </div>
   <div class="floater f2">
-    <p>Does anyone have change for a $20?</p>
+    <p>Does anyone have change for <br/> a $20? I don't see an ATM</p>
   </div>
   <div class="floater f3">
     <p>How long do you think it takes to count those $1s?</p>
@@ -14,6 +15,9 @@
   <div class="floater f5">
     <p>Does she take interac? WealthSimple? Cheque???</p>
   </div>
+  <div class="floater f6">
+    <p>If only there was a better way!</p>
+  </div>
 </div>
 
 <style>
@@ -22,30 +26,42 @@
     overflow-x: auto;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
   }
   .floater {
     font-family: "Open Sans", sans-serif;
+    padding: .5em 0;
+  }
+  .disco-ball {
+    width: 100%;
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
   }
   .f1 {
-    grid-column: 1 / 3;
+    grid-column: 2 / 4;
     grid-row: 1;
   }
   .f2 {
-    grid-column: 4 /6;
+    grid-column: 4 / 7;
     grid-row: 1 / 2;
   }
   .f3 {
-    grid-column: 2 / 4;
+    grid-column: 1 / 3;
     grid-row: 3;
   }
   .f4 {
-    grid-column: 5 / 7;
+    grid-column: 6 / 8;
     grid-row: 3 / 4;
   }
   .f5 {
-    grid-column: 1 / 5;
+    grid-column: 2 / 5;
+    grid-row: 5;
+  }
+  .f6 {
+    grid-column: 5 / 7;
     grid-row: 5;
   }
 

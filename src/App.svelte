@@ -1,7 +1,15 @@
 <script>
   // export let name;
   import Floater from "./components/Floater.svelte";
+  import Neon from "./components/Neon.svelte";
 </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+  rel="stylesheet"
+/>
 
 <nav class="navbar">
   <div class="nav-items">
@@ -13,17 +21,20 @@
   </div>
 </nav>
 <main>
-  <Floater />
-  <h1>Cash isn't sexy. <b>Crypto is.</b></h1>
-  <p>
-    Strypto is introducing modern, decentralized currency to the world's oldest
-    professions. <br /> Sign-up today!
-  </p>
-  <div class="buttons">
-    <button class="hard-btn">Sign-up</button>
-    <button class="soft-btn">Log-in</button>
+  <!-- <Floater /> -->
+  <!-- <h1>Cash isn't sexy. <b>Crypto is.</b></h1> -->
+  <Neon />
+  <div class="call-to-action">
+    <p>
+      Strypto is introducing modern, decentralized currency to the world's oldest
+      professions. <br /> Sign-up today!
+    </p>
+    <div class="buttons">
+      <button class="hard-btn">Sign-up</button>
+      <button class="soft-btn">Log-in</button>
+    </div>
+    <a href="#">Learn more</a>
   </div>
-  <a href="#">Learn more</a>
 </main>
 
 <style>
@@ -32,11 +43,14 @@
     font-size: 1.25em;
     font-weight: 500;
     background-color: black;
+    color: var(--main-cyan);
     width: calc(100vw + 8px);
+    /* width: 100vw; */
     height: 3.25em;
     position: absolute;
     left: -8px;
     top: -8px;
+    box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.5);
   }
   .nav-items {
     width: 90%;
@@ -44,6 +58,10 @@
     display: flex;
     text-align: center;
     justify-content: space-between;
+  }
+  .logo {
+    margin: 1em 1em;
+    font-family: "Pacifico", cursive;
   }
   .nav-right {
     display: flex;
@@ -59,22 +77,19 @@
     max-width: 240px;
     margin: 3.25em auto;
   }
-  h1 {
-    color: rgb(202, 120, 191);
-    text-transform: uppercase;
-    font-size: 4.25em;
-    font-weight: 100;
+.call-to-action {
+  margin: 5em;
 }
-button {
-	background-color: transparent;
-	color: rgb(202, 120, 191);
-	border-color: rgb(202, 120, 191);
+  button {
+    background-color: transparent;
+    color: rgb(202, 120, 191);
+    border-color: rgb(202, 120, 191);
   }
 
   .hard-btn {
-	  background-color: rgb(202, 120, 191);
-	  color: rgb(31, 30, 30);
-	  border-color: rgb(31, 30, 30);
+    background-color: rgb(202, 120, 191);
+    color: rgb(31, 30, 30);
+    border-color: rgb(31, 30, 30);
   }
 
   @media (min-width: 640px) {
