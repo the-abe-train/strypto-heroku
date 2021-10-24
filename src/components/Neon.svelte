@@ -1,15 +1,3 @@
-<link
-  href="https://fonts.googleapis.com/css?family=Vibur:400"
-  rel="stylesheet"
-  type="text/css"
-/>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-  rel="stylesheet"
-/>
-
 <div class="container">
   <h2 class="neon-text">Cash isn't sexy.</h2>
   <h1 class="neon-text">Crypto is.</h1>
@@ -18,7 +6,7 @@
 <style>
   .container {
     /* background-color: #010a01; */
-    margin: 3em 0;
+    margin: 3em 3em 5em 3em;
   }
 
   .neon-text {
@@ -26,19 +14,20 @@
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
       0 0 42px var(--main-pink), 0 0 82px var(--main-pink),
       0 0 92px var(--main-pink), 0 0 102px var(--main-pink);
-    margin: .5rem;
+    margin: 0.5rem;
   }
 
   h2 {
     text-align: center;
-    font-weight: 400;
+    font-weight: 800;
     line-height: 1;
     font-size: 4rem;
     /* animation: pulsate 0.11s ease-in-out infinite alternate; */
+    font-family: "Nunito", sans-serif;
   }
   h1 {
     /* font-family: "Vibur", sans-serif; */
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     text-align: center;
     font-weight: 400;
     line-height: 1;

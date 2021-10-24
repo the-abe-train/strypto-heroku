@@ -2,14 +2,8 @@
   // export let name;
   import Floater from "./components/Floater.svelte";
   import Neon from "./components/Neon.svelte";
+  import Call from "./components/Call.svelte";
 </script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-  rel="stylesheet"
-/>
 
 <nav class="navbar">
   <div class="nav-items">
@@ -23,17 +17,13 @@
 <main>
   <!-- <Floater /> -->
   <!-- <h1>Cash isn't sexy. <b>Crypto is.</b></h1> -->
-  <Neon />
-  <div class="call-to-action">
-    <p>
-      Strypto is introducing modern, decentralized currency to the world's oldest
-      professions. <br /> Sign-up today!
-    </p>
-    <div class="buttons">
-      <button class="hard-btn">Sign-up</button>
-      <button class="soft-btn">Log-in</button>
+  <div class="hero-section">
+    <div class="banner">
+      <Neon />
     </div>
-    <a href="#">Learn more</a>
+    <div class="call-to-action">
+      <Call />
+    </div>
   </div>
 </main>
 
@@ -44,7 +34,7 @@
     font-weight: 500;
     background-color: black;
     color: var(--main-cyan);
-    width: calc(100vw + 8px);
+    width: calc(100% + 8px);
     /* width: 100vw; */
     height: 3.25em;
     position: absolute;
@@ -53,7 +43,7 @@
     box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.5);
   }
   .nav-items {
-    width: 90%;
+    width: clamp(0em, 80%, 50em);
     margin: 0 auto;
     display: flex;
     text-align: center;
@@ -73,24 +63,30 @@
   }
   main {
     text-align: center;
-    padding: 1em;
+    /* padding: 1em; */
     max-width: 240px;
-    margin: 3.25em auto;
+    /* margin: 1.5rem 0; */
+    padding: 1em;
   }
-.call-to-action {
-  margin: 5em;
-}
-  button {
-    background-color: transparent;
-    color: rgb(202, 120, 191);
-    border-color: rgb(202, 120, 191);
+  .hero-section {
+    /* width: clamp(0em, 80%, 50em); */
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 1em 0;
+  }
+  /* .banner {
+    grid-column: 1 / 2;
+  } */
+
+  .call-to-action {
+    margin: 5em;
+    /* grid-column: 2 / end; */
   }
 
-  .hard-btn {
-    background-color: rgb(202, 120, 191);
-    color: rgb(31, 30, 30);
-    border-color: rgb(31, 30, 30);
-  }
 
   @media (min-width: 640px) {
     main {
